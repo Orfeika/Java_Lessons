@@ -1,4 +1,10 @@
 # Java_Lessons
+/*
+Написать программу которая считывает 5-и значное число с
+клавиатуры и выводит цифры из которого оно состоит.
+*/
+
+
 package com.gmail.orfejka;
 
 import java.util.Scanner;
