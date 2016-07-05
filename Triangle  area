@@ -1,0 +1,26 @@
+package com.gmail.orfejka;
+import java.util.Scanner;
+import java.lang.Math;
+public class Main {
+
+
+	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Type the triangle's sides length");
+		double ab=sc.nextInt();
+		
+		double bc=sc.nextInt();
+		
+		double ac =sc.nextInt();
+		
+		double trianglePerimeter= (ab+bc+ac)/2;
+		double triangleArea=Math.sqrt((trianglePerimeter-ab)*
+				(trianglePerimeter-ac)*(trianglePerimeter-bc));
+		
+		System.out.println("Triangle's area is: " + triangleArea);
+	
+	}
+
+}
