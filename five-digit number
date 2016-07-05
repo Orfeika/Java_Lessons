@@ -1,0 +1,35 @@
+package com.gmail.orfejka;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Enter a five-digit number: ");
+			while(sc.hasNext())
+			{		
+				if(sc.hasNextInt())
+				{
+					int number =sc.nextInt();
+					int j =10000;
+			
+						for(int i=0; i<5; i++)
+						{
+							int k =number/j;
+							System.out.println(k);
+							number%=j;
+							j/=10;
+						}
+							
+				}	
+				else
+				{	
+				System.out.println("Wrong number.Enter a five-digit number:");
+					sc.next();		
+				}
+			}
+		sc.close();
+	}	
+		
+
+}
