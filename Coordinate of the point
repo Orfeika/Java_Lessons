@@ -18,7 +18,8 @@ public class Main {
 		int CircleRadius = 4;
 		if (Math.abs(x) >= CircleRadius || Math.abs(y) >= CircleRadius) {
 			System.out.println("The point lies outside of the circle");
-		} else {
+		}
+		else {
 			System.out.println("The point lies inside of the circle");
 		}
 
