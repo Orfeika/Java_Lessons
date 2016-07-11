@@ -1,0 +1,36 @@
+package com.gmail.orfejka;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the coordinates  of  the point  (x,y)");
+		int x = sc.nextInt();
+		int y = sc.nextInt();		
+	
+		int a[] ={0,0};
+		int b[] = {4,4};
+		int c[] = {6,1};
+		/*
+		 * Creating the equation of the lines AB, BC, AC.  
+		 *	If we insert  the  coordinates of the point  we will check on which side of the line is the point. 
+		 *	In our triangle, the point should be on the left from the AC line and on the right from the AB and BC lines
+		 * */
+		int ab =  (x-a[0])*(b[1]-a[1])- (b[0]-a[0])*(y-a[1]);
+		int bc = (x-b[0])*(c[1]-b[1]) - (c[0]-b[0])*(y-b[1]);
+		int ac = (x-a[0])*(c[1]-a[1])-(c[0]-a[0])*(y-a[1]);
+		
+		if(ab>=0 && bc>=0 && ac<=0 ) {
+			System.out.println("The point lies inside of the tringle");
+			System.out.println(ab +" "+bc+ " "+ac);
+		}
+		else {
+			System.out.println("The point lies outside of the tringle");
+			System.out.println(ab +" "+bc+ " "+ac);
+		}
+	}
+
+}
