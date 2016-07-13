@@ -11,28 +11,12 @@ public class Main {
 		System.out.println("type the number");
 		int t = sc.nextInt();
 		char[] arr = new char[t];
-		int j = 0;
-		for (int i = 1; i <= arr.length * 2; i++) {
-
-			if (i < arr.length) {
-				char[] arr1 = new char[i];
-
-				Arrays.fill(arr1, '*');
-
-				System.out.println(Arrays.toString(arr1));
-				j++;
-			}
-
-			else {
-				char[] arr1 = new char[j - 1];
+		int j = 1;
+		for (int i = 1; i <= arr.length * 2 - 1; i++) {
+				char[] arr1 = new char[j];
 				Arrays.fill(arr1, '*');
 				System.out.println(Arrays.toString(arr1));
-				j--;
-				if (j == 1) {
-					break;
-				}
-
-			}
+				j = (i < arr.length)? j+1 : j-1;
 
 		}
 
