@@ -1,0 +1,21 @@
+package com.gmail.orfejka;
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array: ");
+		int mass[] = new int[sc.nextInt()];
+		for (int i = 0; i < mass.length; i++) {
+			System.out.println("Enter the value of the " + i + 1 + " element");
+			mass[i] = sc.nextInt();
+		}
+		System.out.println(Arrays.toString(mass));
+	}
+
+}
