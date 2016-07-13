@@ -7,7 +7,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int t = 10;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("type the number");
+		int t = sc.nextInt();
 		char[] arr = new char[t];
 		int j = 0;
 		for (int i = 1; i <= arr.length * 2; i++) {
