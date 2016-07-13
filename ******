@@ -1,0 +1,39 @@
+package com.gmail.orfejka;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		int t = 10;
+		char[] arr = new char[t];
+		int j = 0;
+		for (int i = 1; i <= arr.length * 2; i++) {
+
+			if (i < arr.length) {
+				char[] arr1 = new char[i];
+
+				Arrays.fill(arr1, '*');
+
+				System.out.println(Arrays.toString(arr1));
+				j++;
+			}
+
+			else {
+				char[] arr1 = new char[j - 1];
+				Arrays.fill(arr1, '*');
+				System.out.println(Arrays.toString(arr1));
+				j--;
+				if (j == 1) {
+					break;
+				}
+
+			}
+
+		}
+
+	}
+
+}
