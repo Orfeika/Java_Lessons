@@ -1,0 +1,21 @@
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int mass[] = { 7, 2, 8, 9 };
+		for (int i = 0; i < mass.length; i++) {
+			int j = mass.length - i - 1;
+			int a = mass[i];
+			int b = mass[j];
+			mass[i] = b;
+			mass[j] = a;
+			int k = mass.length % 2 == 0 ? (mass.length - i - 1) / 2 : (mass.length - i) / 2;
+			if (i == k) {
+				break;
+			}
+		}
+		System.out.println(Arrays.toString(mass));
+	}
+
+}
