@@ -1,25 +1,26 @@
+
 package com.gmail.orfejka;
 
 import java.util.Scanner;
 
 public class Main {
-/*
-Есть круг с центром в начале координат и радиусом 4. Пользователь
-вводит с клавиатуры координаты точки x и y. Написать программу которая
-определит лежит ли эта точка внутри круга или нет.
-
-*/
+	/*
+	 * Есть круг с центром в начале координат и радиусом 4. Пользователь вводит
+	 * с клавиатуры координаты точки x и y. Написать программу которая определит
+	 * лежит ли эта точка внутри круга или нет.
+	 * 
+	 */
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter the coordinates  of  the point  (x,y)");
-		int x = sc.nextInt();
-		int y = sc.nextInt();
-		int CircleRadius = 4;
-		if (Math.abs(x) >= CircleRadius || Math.abs(y) >= CircleRadius) {
+		double x = sc.nextDouble();
+		double y = sc.nextDouble();
+		double CircleRadius = 4;
+		double lenght = Math.sqrt(x * x + y * y);
+		if (lenght >= CircleRadius) {
 			System.out.println("The point lies outside of the circle");
-		}
-		else {
+		} else {
 			System.out.println("The point lies inside of the circle");
 		}
 
